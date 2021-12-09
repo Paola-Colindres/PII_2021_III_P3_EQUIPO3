@@ -135,7 +135,7 @@ public class FacturaService implements IFacturaService {
     public Factura getFacturaByCliente(String cliente) throws BusinessException, NotFoundException {
         Optional<Factura> opt=null;
         try {
-            opt = repository.findByCliente(cliente);
+            opt = repository.findFirstByCliente(cliente);
         } catch (Exception e) {
             throw new BusinessException(e.getMessage());
         }

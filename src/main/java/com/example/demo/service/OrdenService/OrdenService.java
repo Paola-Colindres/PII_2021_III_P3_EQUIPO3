@@ -144,7 +144,7 @@ public class OrdenService implements IOrdenService {
     public Orden getOrdenByPlato(String plato) throws BusinessException, NotFoundException {
         Optional<Orden> opt=null;
         try {
-            opt = repository.findByPlato(plato);
+            opt = repository.findFirstByPlato(plato);
         } catch (Exception e) {
             throw new BusinessException(e.getMessage());
         }
