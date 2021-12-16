@@ -22,6 +22,6 @@ public class Reservaciones {
     private String horaInicio;
     private String horaFinal;
     private int    cantidadPersonas;
-    private Date   fecha;
+    private String fecha;
     private double precioReservacion;
 }

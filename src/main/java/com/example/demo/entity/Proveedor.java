@@ -18,7 +18,7 @@ public class Proveedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long   id;
     private String nombre;
-    private Date   fechaContrato;
+    private String fechaContrato;
     private long   rtn;
     private String ciudad;
     private String direccion;

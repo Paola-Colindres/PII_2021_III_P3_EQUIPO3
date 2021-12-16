@@ -21,7 +21,7 @@ public class Puesto {
     private String estudioMinimo;
     private int    cantidadEmpleados;
     private String usoUniforme;
-    private Date   fechaInicio;
+    private String fechaInicio;
     private String descripcion;
     private String experiencia;
 }

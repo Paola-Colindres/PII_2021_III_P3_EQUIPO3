@@ -20,7 +20,7 @@ public class Sucursal {
     private String nombre;
     private int    cantidadEmpleados;
     private String direccion;
-    private Date   fechaInicio;
+    private String fechaInicio;
     private int    cantidadClientes;
     private double consumoEnergia;
     private String horaAbre;

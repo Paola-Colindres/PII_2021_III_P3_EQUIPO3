@@ -33,11 +33,11 @@ public class EmpleadoService implements IEmpleadoService {
             if (String.valueOf(empleado.getDni()).length() > 12) {
                 throw new BusinessException("DNI demasiado largo");
             }
-            if (empleado.getSueldo() < 0) {
-                throw new BusinessException("El sueldo no puede ser menor a 0");
-            }
             if (String.valueOf(empleado.getSueldo()).isEmpty()) {
                 throw new BusinessException("El valor sueldo está vacío");
+            }
+            if (empleado.getSueldo() <= 0) {
+                throw new BusinessException("El sueldo no puede ser menor a 0");
             }
             if (empleado.getSucursal().isEmpty()) {
                 throw new BusinessException("Sucursal está vacía");
@@ -48,7 +48,7 @@ public class EmpleadoService implements IEmpleadoService {
             if (String.valueOf(empleado.getFechaIngreso()).isEmpty()) {
                 throw new BusinessException("Fecha de inicio está vacía");
             }
-            if (String.valueOf(empleado.getFechaIngreso()).length() < 8) {
+            if (String.valueOf(empleado.getFechaIngreso()).length() < 10) {
                 throw new BusinessException("Fecha ingresada demasiado corta");
             }
             if (empleado.getGenero().isEmpty()) {
@@ -60,7 +60,7 @@ public class EmpleadoService implements IEmpleadoService {
             if (String.valueOf(empleado.getEdad()).isEmpty()) {
                 throw new BusinessException("Edad está vacía");
             }
-            if (empleado.getEdad() < 0) {
+            if (empleado.getEdad() <= 0) {
                 throw new BusinessException("La edad no puede ser menor a 0");
             }
             if (String.valueOf(empleado.getHoras()).isEmpty()) {
@@ -100,11 +100,11 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getDni()).length() > 12) {
                     throw new BusinessException("DNI demasiado largo");
                 }
-                if (empleado.getSueldo() < 0) {
-                    throw new BusinessException("El sueldo no puede ser menor a 0");
-                }
                 if (String.valueOf(empleado.getSueldo()).isEmpty()) {
                     throw new BusinessException("El valor sueldo está vacío");
+                }
+                if (empleado.getSueldo() <= 0) {
+                    throw new BusinessException("El sueldo no puede ser menor a 0");
                 }
                 if (empleado.getSucursal().isEmpty()) {
                     throw new BusinessException("Sucursal está vacía");
@@ -115,7 +115,7 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getFechaIngreso()).isEmpty()) {
                     throw new BusinessException("Fecha de inicio está vacía");
                 }
-                if (String.valueOf(empleado.getFechaIngreso()).length() < 8) {
+                if (String.valueOf(empleado.getFechaIngreso()).length() < 10) {
                     throw new BusinessException("Fecha ingresada demasiado corta");
                 }
                 if (empleado.getGenero().isEmpty()) {
@@ -127,7 +127,7 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getEdad()).isEmpty()) {
                     throw new BusinessException("Edad está vacía");
                 }
-                if (empleado.getEdad() < 0) {
+                if (empleado.getEdad() <= 0) {
                     throw new BusinessException("La edad no puede ser menor a 0");
                 }
                 if (String.valueOf(empleado.getHoras()).isEmpty()) {
@@ -232,11 +232,11 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getDni()).length() > 12) {
                     throw new BusinessException("DNI demasiado largo");
                 }
-                if (empleado.getSueldo() < 0) {
-                    throw new BusinessException("El sueldo no puede ser menor a 0");
-                }
                 if (String.valueOf(empleado.getSueldo()).isEmpty()) {
                     throw new BusinessException("El valor sueldo está vacío");
+                }
+                if (empleado.getSueldo() <= 0) {
+                    throw new BusinessException("El sueldo no puede ser menor a 0");
                 }
                 if (empleado.getSucursal().isEmpty()) {
                     throw new BusinessException("Sucursal está vacía");
@@ -247,7 +247,7 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getFechaIngreso()).isEmpty()) {
                     throw new BusinessException("Fecha de inicio está vacía");
                 }
-                if (String.valueOf(empleado.getFechaIngreso()).length() < 8) {
+                if (String.valueOf(empleado.getFechaIngreso()).length() < 10) {
                     throw new BusinessException("Fecha ingresada demasiado corta");
                 }
                 if (empleado.getGenero().isEmpty()) {
@@ -259,7 +259,7 @@ public class EmpleadoService implements IEmpleadoService {
                 if (String.valueOf(empleado.getEdad()).isEmpty()) {
                     throw new BusinessException("Edad está vacía");
                 }
-                if (empleado.getEdad() < 0) {
+                if (empleado.getEdad() <= 0) {
                     throw new BusinessException("La edad no puede ser menor a 0");
                 }
                 if (String.valueOf(empleado.getHoras()).isEmpty()) {

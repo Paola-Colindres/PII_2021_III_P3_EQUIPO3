@@ -20,7 +20,7 @@ public class Factura {
     private String cliente;
     private String empleado;
     private String orden;
-    private Date   fecha;
+    private String fecha;
     private int    cantidadOrden;
     private String tipoPago;
     private double totalPagar;

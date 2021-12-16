@@ -37,6 +37,9 @@ public class FacturaService implements IFacturaService {
             if (String.valueOf(factura.getFecha()).isEmpty()) {
                 throw new BusinessException("La fecha no debe estar vacia");
             }
+            if (factura.getFecha().length() < 10) {
+                throw new BusinessException("La fecha es demasiado corta");
+            }
             if (String.valueOf(factura.getCantidadOrden()).isEmpty()) {
                 throw new BusinessException("La cantidad de orden no debe estar vacia");
             }
@@ -82,6 +85,9 @@ public class FacturaService implements IFacturaService {
                 }
                 if (String.valueOf(factura.getFecha()).isEmpty()) {
                     throw new BusinessException("La fecha no debe estar vacia");
+                }
+                if (factura.getFecha().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (String.valueOf(factura.getCantidadOrden()).isEmpty()) {
                     throw new BusinessException("La cantidad de orden no debe estar vacia");
@@ -196,6 +202,9 @@ public class FacturaService implements IFacturaService {
                 }
                 if (String.valueOf(factura.getFecha()).isEmpty()) {
                     throw new BusinessException("La fecha no debe estar vacia");
+                }
+                if (factura.getFecha().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (String.valueOf(factura.getCantidadOrden()).isEmpty()) {
                     throw new BusinessException("La cantidad de orden no debe estar vacia");

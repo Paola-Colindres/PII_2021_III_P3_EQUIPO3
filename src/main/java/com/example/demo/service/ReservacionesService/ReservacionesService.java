@@ -52,8 +52,8 @@ public class ReservacionesService implements IReservacionesService{
             if (String.valueOf(reservacion.getFecha()).isEmpty()){
                 throw new BusinessException("Fecha está vacío");
             }
-            if (reservacion.getFecha().getDate() < 2021/12/10){
-                throw new BusinessException("No se puede registrar reservación en pasado");
+            if (reservacion.getFecha().length() < 10){
+                throw new BusinessException("La fecha es demasiaodo corta");
             }
             if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                 throw new BusinessException("El precio de la reservación está vacío");
@@ -104,8 +104,8 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getFecha()).isEmpty()){
                     throw new BusinessException("Fecha está vacío");
                 }
-                if (reservacion.getFecha().getDate() < 2021/12/10){
-                    throw new BusinessException("No se puede registrar reservación en pasado");
+                if (reservacion.getFecha().length() < 10){
+                    throw new BusinessException("La fecha es demasiaodo corta");
                 }
                 if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                     throw new BusinessException("El precio de la reservación está vacío");
@@ -221,8 +221,8 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getFecha()).isEmpty()){
                     throw new BusinessException("Fecha está vacío");
                 }
-                if (reservacion.getFecha().getDate() < 2021/12/10){
-                    throw new BusinessException("No se puede registrar reservación en pasado");
+                if (reservacion.getFecha().length() < 10){
+                    throw new BusinessException("La fecha es demasiaodo corta");
                 }
                 if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                     throw new BusinessException("El precio de la reservación está vacío");

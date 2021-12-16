@@ -22,7 +22,7 @@ public class Empleado {
     private long   dni;
     private double sueldo;
     private String sucursal;
-    private Date   fechaIngreso;
+    private String fechaIngreso;
     private String genero;
     private int    edad;
     private int    horas;

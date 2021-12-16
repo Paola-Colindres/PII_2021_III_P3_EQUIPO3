@@ -21,16 +21,16 @@ public class PuestoService implements IPuestoService {
         try {
             //validaciones
             if(puesto.getNombre().isEmpty()){
-                throw new Exception("El valor Nombre no debe estar vacío");
+                throw new BusinessException("El valor Nombre no debe estar vacío");
             }
             if (puesto.getNombre().length() < 3){
-                throw new Exception("Nombre demasiado corto");
+                throw new BusinessException("Nombre demasiado corto");
             }
             if (puesto.getEstudioMinimo().isEmpty()){
-                throw new Exception("Estudio minimo no puede estar vacío");
+                throw new BusinessException("Estudio minimo no puede estar vacío");
             }
             if (puesto.getEstudioMinimo().length() <= 3){
-                throw new Exception("El valor de Estudio minimo es demasiado corto");
+                throw new BusinessException("El valor de Estudio minimo es demasiado corto");
             }
             if (String.valueOf(puesto.getCantidadEmpleados()).isEmpty()) {
                 throw new BusinessException("La cantidad de empleados no debe estar vacia");
@@ -46,6 +46,9 @@ public class PuestoService implements IPuestoService {
             }
             if (String.valueOf(puesto.getFechaInicio()).isEmpty()) {
                 throw new BusinessException("La fecha de inicio viene vacia");
+            }
+            if (puesto.getFechaInicio().length() < 10) {
+                throw new BusinessException("La fecha es demasiado corta");
             }
             if (puesto.getDescripcion().isEmpty()) {
                 throw new BusinessException("La descripcion viene vacia");
@@ -71,16 +74,16 @@ public class PuestoService implements IPuestoService {
         try {
             for (Puesto puesto: puestos) {
                 if(puesto.getNombre().isEmpty()){
-                    throw new Exception("El valor Nombre no debe estar vacío");
+                    throw new BusinessException("El valor Nombre no debe estar vacío");
                 }
                 if (puesto.getNombre().length() < 3){
-                    throw new Exception("Nombre demasiado corto");
+                    throw new BusinessException("Nombre demasiado corto");
                 }
                 if (puesto.getEstudioMinimo().isEmpty()){
-                    throw new Exception("Estudio minimo no puede estar vacío");
+                    throw new BusinessException("Estudio minimo no puede estar vacío");
                 }
                 if (puesto.getEstudioMinimo().length() <= 3){
-                    throw new Exception("El valor de Estudio minimo es demasiado corto");
+                    throw new BusinessException("El valor de Estudio minimo es demasiado corto");
                 }
                 if (String.valueOf(puesto.getCantidadEmpleados()).isEmpty()) {
                     throw new BusinessException("La cantidad de empleados no debe estar vacia");
@@ -96,6 +99,9 @@ public class PuestoService implements IPuestoService {
                 }
                 if (String.valueOf(puesto.getFechaInicio()).isEmpty()) {
                     throw new BusinessException("La fecha de inicio viene vacia");
+                }
+                if (puesto.getFechaInicio().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (puesto.getDescripcion().isEmpty()) {
                     throw new BusinessException("La descripcion viene vacia");
@@ -187,16 +193,16 @@ public class PuestoService implements IPuestoService {
         else {
             try {
                 if(puesto.getNombre().isEmpty()){
-                    throw new Exception("El valor Nombre no debe estar vacío");
+                    throw new BusinessException("El valor Nombre no debe estar vacío");
                 }
                 if (puesto.getNombre().length() < 3){
-                    throw new Exception("Nombre demasiado corto");
+                    throw new BusinessException("Nombre demasiado corto");
                 }
                 if (puesto.getEstudioMinimo().isEmpty()){
-                    throw new Exception("Estudio minimo no puede estar vacío");
+                    throw new BusinessException("Estudio minimo no puede estar vacío");
                 }
                 if (puesto.getEstudioMinimo().length() <= 3){
-                    throw new Exception("El valor de Estudio minimo es demasiado corto");
+                    throw new BusinessException("El valor de Estudio minimo es demasiado corto");
                 }
                 if (String.valueOf(puesto.getCantidadEmpleados()).isEmpty()) {
                     throw new BusinessException("La cantidad de empleados no debe estar vacia");
@@ -212,6 +218,9 @@ public class PuestoService implements IPuestoService {
                 }
                 if (String.valueOf(puesto.getFechaInicio()).isEmpty()) {
                     throw new BusinessException("La fecha de inicio viene vacia");
+                }
+                if (puesto.getFechaInicio().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (puesto.getDescripcion().isEmpty()) {
                     throw new BusinessException("La descripcion viene vacia");

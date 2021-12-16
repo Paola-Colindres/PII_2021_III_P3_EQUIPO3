@@ -29,6 +29,9 @@ public class ProveedorService implements IProveedorService {
             if (String.valueOf(proveedor.getFechaContrato()).isEmpty()) {
                 throw new BusinessException("La fecha viene vacia");
             }
+            if (proveedor.getFechaContrato().length() < 10) {
+                throw new BusinessException("La fecha es demasiado corta");
+            }
             if (String.valueOf(proveedor.getRtn()).isEmpty()) {
                 throw new BusinessException("El rtn no debe estar vacio");
             }
@@ -89,6 +92,9 @@ public class ProveedorService implements IProveedorService {
                 }
                 if (String.valueOf(proveedor.getFechaContrato()).isEmpty()) {
                     throw new BusinessException("La fecha viene vacia");
+                }
+                if (proveedor.getFechaContrato().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (String.valueOf(proveedor.getRtn()).isEmpty()) {
                     throw new BusinessException("El rtn no debe estar vacio");
@@ -218,6 +224,9 @@ public class ProveedorService implements IProveedorService {
                 }
                 if (String.valueOf(proveedor.getFechaContrato()).isEmpty()) {
                     throw new BusinessException("La fecha viene vacia");
+                }
+                if (proveedor.getFechaContrato().length() < 10) {
+                    throw new BusinessException("La fecha es demasiado corta");
                 }
                 if (String.valueOf(proveedor.getRtn()).isEmpty()) {
                     throw new BusinessException("El rtn no debe estar vacio");

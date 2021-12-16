@@ -67,6 +67,9 @@ public class ClienteService implements IClienteService{
             if (String.valueOf(cliente.getEdad()).length() > 3){
                 throw new BusinessException("Edad Ingresada invalida");
             }
+            if (cliente.getEdad() <= 0) {
+                throw new BusinessException("La edad no puede ser <= 0");
+            }
             return repository.save(cliente);
         }catch (Exception e){
             throw new BusinessException(e.getMessage());
@@ -124,6 +127,9 @@ public class ClienteService implements IClienteService{
                 }
                 if (String.valueOf(cliente.getEdad()).length() > 3){
                     throw new BusinessException("Edad Ingresada invalida");
+                }
+                if (cliente.getEdad() <= 0) {
+                    throw new BusinessException("La edad no puede ser <= 0");
                 }
             }
             return repository.saveAll(clientes);
@@ -247,6 +253,9 @@ public class ClienteService implements IClienteService{
                 }
                 if (String.valueOf(cliente.getEdad()).length() > 3){
                     throw new BusinessException("Edad Ingresada invalida");
+                }
+                if (cliente.getEdad() <= 0) {
+                    throw new BusinessException("La edad no puede ser <= 0");
                 }
                 Cliente existingCliente = new Cliente();
                 existingCliente.setId(cliente.getId());

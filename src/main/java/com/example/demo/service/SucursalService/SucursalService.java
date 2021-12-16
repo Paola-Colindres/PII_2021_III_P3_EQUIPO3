@@ -39,6 +39,9 @@ public class SucursalService implements ISucursalService {
             if (String.valueOf(sucursal.getFechaInicio()).isEmpty()){
                 throw new BusinessException("La fecha de inicio está vacía");
             }
+            if (sucursal.getFechaInicio().length() < 10){
+                throw new BusinessException("La fecha es demasiaodo corta");
+            }
             /*if (sucursal.getFechaInicio().getYear() > LocalDate.now()){
                 throw new BusinessException("La fecha inicio no puede ser a futuro");
             }*/
@@ -96,6 +99,9 @@ public class SucursalService implements ISucursalService {
                 }
                 if (String.valueOf(sucursal.getFechaInicio()).isEmpty()){
                     throw new BusinessException("La fecha de inicio está vacía");
+                }
+                if (sucursal.getFechaInicio().length() < 10){
+                    throw new BusinessException("La fecha es demasiaodo corta");
                 }
             /*if (sucursal.getFechaInicio().getYear() > LocalDate.now()){
                 throw new BusinessException("La fecha inicio no puede ser a futuro");
@@ -220,6 +226,9 @@ public class SucursalService implements ISucursalService {
                 }
                 if (String.valueOf(sucursal.getFechaInicio()).isEmpty()){
                     throw new BusinessException("La fecha de inicio está vacía");
+                }
+                if (sucursal.getFechaInicio().length() < 10){
+                    throw new BusinessException("La fecha es demasiaodo corta");
                 }
             /*if (sucursal.getFechaInicio().getYear() > LocalDate.now()){
                 throw new BusinessException("La fecha inicio no puede ser a futuro");
