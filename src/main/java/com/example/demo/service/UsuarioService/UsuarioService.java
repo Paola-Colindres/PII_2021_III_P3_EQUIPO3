@@ -35,7 +35,7 @@ public class UsuarioService implements IUsuarioService {
             if (usuario.getCorreo().isEmpty()) {
                 throw new BusinessException("El correo viene vacio");
             }
-            if (usuario.getCorreo().length() < 5) {
+            if (usuario.getCorreo().length() < 10) {
                 throw new BusinessException("Correo incorrecto");
             }
             if (usuario.getRol().isEmpty()) {
@@ -72,7 +72,7 @@ public class UsuarioService implements IUsuarioService {
                 if (usuario.getCorreo().isEmpty()) {
                     throw new BusinessException("El correo viene vacio");
                 }
-                if (usuario.getCorreo().length() < 5) {
+                if (usuario.getCorreo().length() < 10) {
                     throw new BusinessException("Correo incorrecto");
                 }
                 if (usuario.getRol().isEmpty()) {
@@ -177,7 +177,7 @@ public class UsuarioService implements IUsuarioService {
                 if (usuario.getCorreo().isEmpty()) {
                     throw new BusinessException("El correo viene vacio");
                 }
-                if (usuario.getCorreo().length() < 5) {
+                if (usuario.getCorreo().length() < 10) {
                     throw new BusinessException("Correo incorrecto");
                 }
                 if (usuario.getRol().isEmpty()) {

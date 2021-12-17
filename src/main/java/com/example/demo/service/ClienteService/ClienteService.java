@@ -34,6 +34,9 @@ public class ClienteService implements IClienteService{
             if (String.valueOf(cliente.getDni()).length() > 12) {
                 throw new BusinessException("DNI demasiado largo");
             }
+            if (cliente.getDni() < 0) {
+                throw new BusinessException("DNI invalido");
+            }
             if (cliente.getOcupacion().isEmpty()){
                 throw new BusinessException("La ocupacion de cliente está vacía");
             }
@@ -94,6 +97,9 @@ public class ClienteService implements IClienteService{
                 }
                 if (String.valueOf(cliente.getDni()).length() > 12) {
                     throw new BusinessException("DNI demasiado largo");
+                }
+                if (cliente.getDni() < 0) {
+                    throw new BusinessException("DNI invalido");
                 }
                 if (cliente.getOcupacion().isEmpty()){
                     throw new BusinessException("La ocupacion de cliente está vacía");
@@ -220,6 +226,9 @@ public class ClienteService implements IClienteService{
                 }
                 if (String.valueOf(cliente.getDni()).length() > 12) {
                     throw new BusinessException("DNI demasiado largo");
+                }
+                if (cliente.getDni() < 0) {
+                    throw new BusinessException("DNI invalido");
                 }
                 if (cliente.getOcupacion().isEmpty()){
                     throw new BusinessException("La ocupacion de cliente está vacía");

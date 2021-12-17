@@ -22,7 +22,7 @@ public class MenuService implements IMenuService {
             if (menu.getProducto().isEmpty()) {
                 throw new BusinessException("El producto no puede ir vacio.");
             }
-            if (menu.getProducto().length() < 2) {
+            if (menu.getProducto().length() < 4) {
                 throw new BusinessException("El nombre del producto es demasiado corto.");
             }
             if (String.valueOf(menu.getStock()).isEmpty()) {
@@ -52,7 +52,7 @@ public class MenuService implements IMenuService {
             if (menu.getTiempoPreparacion().isEmpty()) {
                 throw new BusinessException("Debe indicar el tiempo de preparación apróximado");
             }
-            if (menu.getTiempoPreparacion().length() < 3) {
+            if (menu.getTiempoPreparacion().length() < 4) {
                 throw new BusinessException("Tiempo de preparacion incorrecto");
             }
             if (menu.getVariaciones().isEmpty()) {
@@ -74,7 +74,7 @@ public class MenuService implements IMenuService {
                 if (menu.getProducto().isEmpty()) {
                     throw new BusinessException("El producto no puede ir vacio.");
                 }
-                if (menu.getProducto().length() < 2) {
+                if (menu.getProducto().length() < 4) {
                     throw new BusinessException("El nombre del producto es demasiado corto.");
                 }
                 if (String.valueOf(menu.getStock()).isEmpty()) {
@@ -104,7 +104,7 @@ public class MenuService implements IMenuService {
                 if (menu.getTiempoPreparacion().isEmpty()) {
                     throw new BusinessException("Debe indicar el tiempo de preparación apróximado");
                 }
-                if (menu.getTiempoPreparacion().length() < 3) {
+                if (menu.getTiempoPreparacion().length() < 4) {
                     throw new BusinessException("Tiempo de preparacion incorrecto");
                 }
                 if (menu.getVariaciones().isEmpty()) {
@@ -194,7 +194,7 @@ public class MenuService implements IMenuService {
                 if (menu.getProducto().isEmpty()) {
                     throw new BusinessException("El producto no puede ir vacio.");
                 }
-                if (menu.getProducto().length() < 2) {
+                if (menu.getProducto().length() < 4) {
                     throw new BusinessException("El nombre del producto es demasiado corto.");
                 }
                 if (String.valueOf(menu.getStock()).isEmpty()) {
@@ -224,7 +224,7 @@ public class MenuService implements IMenuService {
                 if (menu.getTiempoPreparacion().isEmpty()) {
                     throw new BusinessException("Debe indicar el tiempo de preparación apróximado");
                 }
-                if (menu.getTiempoPreparacion().length() < 3) {
+                if (menu.getTiempoPreparacion().length() < 4) {
                     throw new BusinessException("Tiempo de preparacion incorrecto");
                 }
                 if (menu.getVariaciones().isEmpty()) {
