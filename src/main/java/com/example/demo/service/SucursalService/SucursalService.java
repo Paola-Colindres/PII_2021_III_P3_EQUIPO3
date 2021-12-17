@@ -27,7 +27,7 @@ public class SucursalService implements ISucursalService {
             if (String.valueOf(sucursal.getCantidadEmpleados()).isEmpty()){
                 throw new BusinessException("Cantidad de empleados está vacía");
             }
-            if (sucursal.getCantidadEmpleados() < 0){
+            if (sucursal.getCantidadEmpleados() <= 0){
                 throw new BusinessException("La cantidad de Empleados no puede ser menor a 0");
             }
             if (sucursal.getDireccion().isEmpty()){
@@ -48,13 +48,13 @@ public class SucursalService implements ISucursalService {
             if (String.valueOf(sucursal.getCantidadClientes()).isEmpty()){
                 throw new BusinessException("La cantidad de clientes está vacía");
             }
-            if (sucursal.getCantidadClientes() < 0){
+            if (sucursal.getCantidadClientes() <= 0){
                 throw new BusinessException("La cantidad de clientes no puede ser menor a 0");
             }
             if (String.valueOf(sucursal.getConsumoEnergia()).isEmpty()){
                 throw new BusinessException("El consumo de energía está vacío");
             }
-            if (sucursal.getConsumoEnergia() < 0){
+            if (sucursal.getConsumoEnergia() <= 0){
                 throw new BusinessException("El consumo de energía no puede ser menor a 0");
             }
             if (sucursal.getHoraAbre().isEmpty()){
@@ -88,7 +88,7 @@ public class SucursalService implements ISucursalService {
                 if (String.valueOf(sucursal.getCantidadEmpleados()).isEmpty()){
                     throw new BusinessException("Cantidad de empleados está vacía");
                 }
-                if (sucursal.getCantidadEmpleados() < 0){
+                if (sucursal.getCantidadEmpleados() <= 0){
                     throw new BusinessException("La cantidad de Empleados no puede ser menor a 0");
                 }
                 if (sucursal.getDireccion().isEmpty()){
@@ -109,13 +109,13 @@ public class SucursalService implements ISucursalService {
                 if (String.valueOf(sucursal.getCantidadClientes()).isEmpty()){
                     throw new BusinessException("La cantidad de clientes está vacía");
                 }
-                if (sucursal.getCantidadClientes() < 0){
+                if (sucursal.getCantidadClientes() <= 0){
                     throw new BusinessException("La cantidad de clientes no puede ser menor a 0");
                 }
                 if (String.valueOf(sucursal.getConsumoEnergia()).isEmpty()){
                     throw new BusinessException("El consumo de energía está vacío");
                 }
-                if (sucursal.getConsumoEnergia() < 0){
+                if (sucursal.getConsumoEnergia() <= 0){
                     throw new BusinessException("El consumo de energía no puede ser menor a 0");
                 }
                 if (sucursal.getHoraAbre().isEmpty()){
@@ -215,7 +215,7 @@ public class SucursalService implements ISucursalService {
                 if (String.valueOf(sucursal.getCantidadEmpleados()).isEmpty()){
                     throw new BusinessException("Cantidad de empleados está vacía");
                 }
-                if (sucursal.getCantidadEmpleados() < 0){
+                if (sucursal.getCantidadEmpleados() <= 0){
                     throw new BusinessException("La cantidad de Empleados no puede ser menor a 0");
                 }
                 if (sucursal.getDireccion().isEmpty()){
@@ -236,13 +236,13 @@ public class SucursalService implements ISucursalService {
                 if (String.valueOf(sucursal.getCantidadClientes()).isEmpty()){
                     throw new BusinessException("La cantidad de clientes está vacía");
                 }
-                if (sucursal.getCantidadClientes() < 0){
+                if (sucursal.getCantidadClientes() <= 0){
                     throw new BusinessException("La cantidad de clientes no puede ser menor a 0");
                 }
                 if (String.valueOf(sucursal.getConsumoEnergia()).isEmpty()){
                     throw new BusinessException("El consumo de energía está vacío");
                 }
-                if (sucursal.getConsumoEnergia() < 0){
+                if (sucursal.getConsumoEnergia() <= 0){
                     throw new BusinessException("El consumo de energía no puede ser menor a 0");
                 }
                 if (sucursal.getHoraAbre().isEmpty()){

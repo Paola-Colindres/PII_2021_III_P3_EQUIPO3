@@ -46,7 +46,7 @@ public class ReservacionesService implements IReservacionesService{
             if (String.valueOf(reservacion.getCantidadPersonas()).isEmpty()){
                 throw new BusinessException("Cantidad de personas está vacío");
             }
-            if (reservacion.getCantidadPersonas() < 0){
+            if (reservacion.getCantidadPersonas() <= 0){
                 throw new BusinessException("La cantidad de personas no puede ser menor a 0");
             }
             if (String.valueOf(reservacion.getFecha()).isEmpty()){
@@ -58,7 +58,7 @@ public class ReservacionesService implements IReservacionesService{
             if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                 throw new BusinessException("El precio de la reservación está vacío");
             }
-            if (reservacion.getPrecioReservacion() < 0){
+            if (reservacion.getPrecioReservacion() <= 0){
                 throw new BusinessException("El precio de la reservacion no puede ser menor a 0");
             }
             return repository.save(reservacion);
@@ -98,7 +98,7 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getCantidadPersonas()).isEmpty()){
                     throw new BusinessException("Cantidad de personas está vacío");
                 }
-                if (reservacion.getCantidadPersonas() < 0){
+                if (reservacion.getCantidadPersonas() <= 0){
                     throw new BusinessException("La cantidad de personas no puede ser menor a 0");
                 }
                 if (String.valueOf(reservacion.getFecha()).isEmpty()){
@@ -110,7 +110,7 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                     throw new BusinessException("El precio de la reservación está vacío");
                 }
-                if (reservacion.getPrecioReservacion() < 0){
+                if (reservacion.getPrecioReservacion() <= 0){
                     throw new BusinessException("El precio de la reservacion no puede ser menor a 0");
                 }
             }
@@ -215,7 +215,7 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getCantidadPersonas()).isEmpty()){
                     throw new BusinessException("Cantidad de personas está vacío");
                 }
-                if (reservacion.getCantidadPersonas() < 0){
+                if (reservacion.getCantidadPersonas() <= 0){
                     throw new BusinessException("La cantidad de personas no puede ser menor a 0");
                 }
                 if (String.valueOf(reservacion.getFecha()).isEmpty()){
@@ -227,7 +227,7 @@ public class ReservacionesService implements IReservacionesService{
                 if (String.valueOf(reservacion.getPrecioReservacion()).isEmpty()){
                     throw new BusinessException("El precio de la reservación está vacío");
                 }
-                if (reservacion.getPrecioReservacion() < 0){
+                if (reservacion.getPrecioReservacion() <= 0){
                     throw new BusinessException("El precio de la reservacion no puede ser menor a 0");
                 }
                 Reservaciones existingReservacion = new Reservaciones();
